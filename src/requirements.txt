@@ -6,3 +6,4 @@ gunicorn       # WSGI server for production
 SQLAlchemy     # ORM for database interactions
 ipykernel      # Jupyter kernel if you're using Jupyter Notebooks
 ipython        # Interactive Python shell (if needed)
+pymysql

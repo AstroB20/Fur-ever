@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 
 # MySQL database configuration (using PyMySQL)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'mysql+pymysql://root:Tiger@localhost/se_project')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'mysql+pymysql://root:Tiger@host.docker.internal/se_project')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # File upload configuration
@@ -18,7 +18,7 @@ db = SQLAlchemy(app)
 class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), nullable=False)
-    caption = db.Column(db.String(200), nullable=True)
+    caption = db.Column(db.String(200), nullable=True)          
     image_url = db.Column(db.String(200), nullable=False)
     likes = db.Column(db.Integer, default=0)
     comments = db.relationship('Comment', backref='post', lazy=True)
