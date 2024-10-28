@@ -1,0 +1,8 @@
+Flask
+Flask-SQLAlchemy
+Flask-Migrate # Optional for database migrations
+Flask-Cors    # Optional for Cross-Origin Resource Sharing
+gunicorn       # WSGI server for production
+SQLAlchemy     # ORM for database interactions
+ipykernel      # Jupyter kernel if you're using Jupyter Notebooks
+ipython        # Interactive Python shell (if needed)
